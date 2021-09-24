@@ -1,17 +1,21 @@
    
 // Only change code below this line
-function myMutation(arr){
-
-    var checkedString = arr[0].toLowerCase();
-    var letters = arr[1].toLowerCase();
-
-    for(var i = 0; i < letters.length; i++){
-        if(checkedString.includes(letters[i]) == false){
-            return false;
+function myMutation(arr) {
+    var firstString = arr[0].toLowerCase();
+    var secondString = arr[1].toLowerCase();
+  
+    for (var i = 0; i < secondString.length; i++) {
+      for (var j = 0; j < firstString.length; j++) {
+        if (secondString[i] === firstString[j]) {
+          break;
         }
+        if (j === firstString.length - 1) {
+          return false;
+        }
+      }
     }
     return true;
-}
+  }
 
 
 // Only change code above this line

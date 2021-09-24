@@ -1,13 +1,7 @@
 // Only change code below this line
 
 function myBouncer(arr) {
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] == 0 || Number.isNaN(arr[i]) || arr[i] == null || arr[i] == false || arr[i] == "" || arr[i] == undefined) {
-            arr.splice(i, 1);
-            i--;
-        }
-    }
-    return arr;
+  return arr.filter(Boolean);
 }
 
 // Only change code above this line
